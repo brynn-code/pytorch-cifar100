@@ -22,7 +22,7 @@ from torch.utils.data import DataLoader
 #from dataset import *
 from torch.autograd import Variable
 
-from tensorboardX import SummaryWriter
+#from tensorboardX import SummaryWriter
 
 from conf import settings
 from utils import get_network, get_training_dataloader, get_test_dataloader, WarmUpLR
@@ -105,7 +105,7 @@ def eval_training(epoch):
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('-net', type=str, required=True, help='net type')
+    parser.add_argument('-net', type=str, default='googlenet', help='net type')
     parser.add_argument('-gpu', type=bool, default=True, help='use gpu or not')
     parser.add_argument('-w', type=int, default=2, help='number of workers for dataloader')
     parser.add_argument('-b', type=int, default=128, help='batch size for dataloader')

@@ -136,6 +136,12 @@ def get_network(args, use_gpu=True):
     elif args.net == 'seresnet152':
         from models.senet import seresnet152
         net = seresnet152()
+    elif args.net == 'lenet5':
+        from models.senet import lenet5
+        net = lenet5()
+    elif args.net == 'alexnet':
+        from models.senet import alexnet
+        net = alexnet()
 
     else:
         print('the network name you have entered is not supported yet')

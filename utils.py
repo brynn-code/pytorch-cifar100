@@ -137,10 +137,10 @@ def get_network(args, use_gpu=True):
         from models.senet import seresnet152
         net = seresnet152()
     elif args.net == 'lenet5':
-        from models.senet import lenet5
+        from models.lenet5 import lenet5
         net = lenet5()
     elif args.net == 'alexnet':
-        from models.senet import alexnet
+        from models.alexnet import alexnet
         net = alexnet()
 
     else:

@@ -10,7 +10,7 @@ This is my experiment eviroument, pytorch0.4 should also be fine
 - tensorflow1.5(optional)
 - cuda8.0
 - cudnnv5
-- tensorboardX1.6(optional)
+- tensorboardX2.0(optional)
 
 
 ## Usage

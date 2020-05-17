@@ -107,7 +107,7 @@ HOME = os.path.expanduser("~") + "/pytorch-cifar100/"
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('-net', type=str, default='resnet18' , help='net type')
+    parser.add_argument('-net', type=str, default='alexnet' , help='net type')
     parser.add_argument('-gpu', type=bool, default=True, help='use gpu or not')
     parser.add_argument('-w', type=int, default=4, help='number of workers for dataloader')
     parser.add_argument('-b', type=int, default=128, help='batch size for dataloader')
@@ -117,14 +117,14 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     net = get_network(args, use_gpu=args.gpu)
-        
+    
     #data preprocessing:
     cifar100_training_loader = get_training_dataloader(
         settings.CIFAR100_TRAIN_MEAN,
         settings.CIFAR100_TRAIN_STD,
         num_workers=args.w,
         batch_size=args.b,
-        shuffle=args.s
+        shuffle=args.s,
     )
     
     cifar100_test_loader = get_test_dataloader(

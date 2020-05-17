@@ -32,7 +32,7 @@ class CIFAR100Train(Dataset):
         g = self.data['data'.encode()][index, 1024:2048].reshape(32, 32)
         b = self.data['data'.encode()][index, 2048:].reshape(32, 32)
         image = numpy.dstack((r, g, b))
-
+        
         if self.transform:
             image = self.transform(image)
         return label, image
